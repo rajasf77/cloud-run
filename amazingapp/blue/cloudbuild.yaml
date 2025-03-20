@@ -1,6 +1,6 @@
 steps:
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/myapp', '.']
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["build", "-t", "gcr.io/YOUR_PROJECT_ID/YOUR_IMAGE_NAME", "-f", "amazingapp/blue/Dockerfile", "amazingapp/blue/"]
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/myapp']
